@@ -1,0 +1,3 @@
+export default {
+	jwtSecret:'BJ9RCSPDBYtCvYlF3DKCjLBeHgHaVDWibixlyNwJtJ93PkhLS8ZeaO1mKarsSHlYyzho2erFo42Rf5VMUGrZIg'
+};

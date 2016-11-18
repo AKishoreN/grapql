@@ -1,0 +1,49 @@
+//add
+{
+	"query":"mutation ($data: ProductInput!) {addProduct(data:$data)}",
+	"variables":{
+		"data":{
+			"title":"First post",
+			"description":"GraphQL vl qua ba con"
+		}
+	}
+}
+
+//getAll
+{
+    "query": "query { products { _id, name, description } }"
+}
+
+//getById
+{
+    "query": "query ($id: ID!) { product(id: $id) {name, description} }",
+    "variables": {
+        "id": "569e72a7ebd14d53eccef867"
+    }
+}
+
+//update
+{
+    "query": "mutation ($id: ID!,$data:ProductInput!) { updateProduct(id: $id,data:$data)}",
+    "variables": {
+        "id": "5820030c2de3fa32750ec595",
+        "data":{
+        	"name":"Test 2222",
+        	"description":"2222 tesing"
+        }
+    }
+}
+//delete
+{
+    "query": "mutation ($id: ID!) { removeProduct(id: $id) {name, description} }",
+    "variables": {
+        "id": "569e72a7ebd14d53eccef867"
+    }
+}
+
+//deleteAll
+{
+    "query": "mutation { removeAllProducts}"
+}
+
+//webpack --config webpack.config.js
